@@ -1,36 +1,9 @@
-// const sub = document.querySelector(".reference-bar-left");
-
 //image pages buttons
 const btnRight = document.querySelector(".btn-right");
 const btnLeft = document.querySelector(".btn-left");
 const curImgNum = document.querySelector(".cur-img-num");
 const totalImgNumDOM = document.querySelector(".total-img-num");
 
-
-//image pages
-// const img1 = {
-//   id: 1,
-//   src: "images/img1.jpeg",
-// };
-// const img2 = {
-//   id: 2,
-//   src: "images/img2.jpeg",
-// };
-// const img3 = {
-//   id: 3,
-//   src: "images/img3.jpg",
-// };
-
-// const img4 = {
-//   id: 4,
-//   src: "images/img4.jpg",
-// };
-// const img5 = {
-//   id: 5,
-//   src: "images/img5.jpg",
-// };
-
-// const imgs = [img1, img2, img3, img4, img5];
 
 const imgs = [
   { id: 1, src: "images/img1.jpeg" },
@@ -43,16 +16,10 @@ const imgs = [
 const totalImgCount = imgs.length;
 totalImgNumDOM.textContent = totalImgCount.toString();
 let num = 1;
-// let currentScale = 1;
-
 //end of image pages
 
 //image pages - forward and backward
 function changeImgForward() {
-  // currentScale = 1
-  // img.style.transform = `scale(1)`;
-  // img.style.filter = `brightness(1)`;
-  // img.style.transform = `rotate(0deg)`;
   if (num > totalImgCount - 1 || num < 1) return;
   num++;
   curImgNum.textContent = num.toString();
@@ -61,11 +28,6 @@ function changeImgForward() {
   return;
 }
 function changeImgBack() {
-  // currentScale = 1
-  // img.style.filter = `brightness(1)`;
-  // img.style.transform = `scale(1)`;
-  // img.style.transform = `rotate(0deg)`;
-
   if (num > totalImgCount || num <= 1) return;
   num--;
   curImgNum.textContent = num.toString();
@@ -93,8 +55,6 @@ let state = JSON.parse(localStorage.getItem("imageState")) || {
 };
 
 // //icons
-// const brightnessBtn = document.querySelector("#brightness-icon");
-// const contrastBtn = document.querySelector("#contrast-icon");
 const rotateBtn = document.querySelector("#rotate-icon");
 const zoomBtn = document.querySelectorAll(".zoom");
 
