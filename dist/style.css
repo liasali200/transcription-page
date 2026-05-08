@@ -1,0 +1,188 @@
+* {
+  /* margin: 7.5px 0 7.5px 0; */
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 120rem;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #007fad;
+  height: 3.4rem;
+  margin-bottom: 1.4rem;
+}
+
+.free-comett-logo {
+  height: 3.4rem;
+  width: auto;
+  padding-left: 2.5%;
+}
+
+.free-reg-logo {
+  height: 3.4rem;
+  width: auto;
+  padding-right: 2.5%;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  padding-right: 40px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* end of template */
+main {
+  padding: 0.6rem 0;
+}
+
+.nav-container {
+  width: 100%;
+  padding: 0 3% 0 3%;
+  display: block;
+  position: relative;
+}
+
+/* main */
+.reference-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 2.4rem;
+  font-size: 16px;
+  position: relative;
+  margin-bottom: 0rem;
+}
+
+.page-tools {
+  gap: 0.3rem;
+}
+.page-tools .btn-left,
+.page-tools .btn-right {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.canvas-container {
+  width: 100%;
+  max-height: fit-content;
+  display: grid;
+  place-items: center;
+  padding: 0 3rem;
+  /* added */
+}
+.canvas-container canvas {
+  width: 100%;
+  border: 1px solid black;
+  cursor: grab;
+}
+
+#rotate-input {
+  display: none;
+}
+
+.toolbox {
+  display: flex;
+  flex-direction: row-reverse;
+  height: auto;
+  width: auto;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+  background-color: rgba(15, 15, 15, 0.6078431373);
+  right: 0.7rem;
+  padding: 0.15rem 0;
+  border-radius: 2px;
+}
+.toolbox .setting-button {
+  position: relative;
+  z-index: 100;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.toolbox .icon-group {
+  display: flex;
+}
+.toolbox .icon {
+  height: 3rem;
+  width: 3rem;
+  position: relative;
+  z-index: 99;
+  cursor: pointer;
+  color: white;
+  display: block;
+  margin: 2px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 1px solid white;
+}
+.toolbox .icon.zoom-display {
+  width: 3.9rem;
+  padding: 0;
+  margin: 2px auto;
+  display: grid;
+  place-items: center;
+  border: none;
+}
+.toolbox .icon.reset {
+  width: 3rem;
+  padding: 0;
+  margin: 2px auto;
+  display: grid;
+  place-items: center;
+}
+.toolbox svg {
+  cursor: pointer;
+}
+.toolbox .image-editor-toolbar {
+  height: auto;
+  width: auto;
+  z-index: 2;
+  cursor: pointer;
+  color: white;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 0.15rem 0;
+}
+.toolbox .image-editor-toolbar .img-tools-sliders {
+  display: grid;
+  padding: 0.15rem 0;
+  width: auto;
+  height: auto;
+}
+.toolbox .image-editor-toolbar .img-tools-sliders .slider-wrapper-style {
+  width: 70%;
+  grid-template-columns: 1fr 1fr;
+  place-items: right;
+  gap: 0.5rem;
+  padding: 0.15rem 0;
+}
+
+.is-visible {
+  display: block;
+}
+.is-visible.page-tools {
+  display: flex;
+}
+.is-visible.slider-wrapper-style {
+  display: grid;
+}
+
+.is-invisible {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

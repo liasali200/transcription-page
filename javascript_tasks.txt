@@ -2,12 +2,16 @@ css
 add breakpoints, media queries for a iPhone size document
 
 javascript
-drag image functionality
-table headers - set pre defined ones, optional ones and saved layouts under dropdown.
-once slected, table headers will display accordingly.
-any personalised layout created must be given a name, then 'confirm' button to save
-under dropdown buttons to 'create' new layout and 'modify' existing layouts
-table header selections for baptisms, marriages and burials / checkboxes then display the layout accordingly with selected table headers
-functionality so each user can save the table header selection for next time
-activate saved layout types from the user (under the event types) and apply to table headers - user can create  / personalise any number of layouts as he likes)
-if no layouts have been created, default table headers used
+- drag image functionality
+- *the data table at the bottom must be removed.*
+
+- *A toggle show/hide button which is always visible. If the toggle button is clicked, the other buttons (brightness, contrast, etc) become visible. The idea is to reduce as much as possible the screen dimensions of the image viewer. Possibly position the main toggle show/hide button at one corner of the image, imposed on top of the image.*
+
+*Two event listeners: 
+one to hide the viewer, the other to show the viewer. 
+
+This setting will be permanent (will persist beyond the browser being closed). 
+Use localstorage to preserve the setting.*
+
+*All buttons should be larger, 
+with tooltips showing a description when mouse hovers over the button.*

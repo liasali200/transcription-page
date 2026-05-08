@@ -1,6 +1,9 @@
+
+// !! file not in use
+
 // const containerEl = document.querySelector(".container");
 const img = document.querySelector(".image");
-const sub = document.querySelector(".sub-nav-left");
+const sub = document.querySelector(".reference-bar-left");
 const btnRight = document.querySelector(".btn-right");
 const btnLeft = document.querySelector(".btn-left");
 const curImgNum = document.querySelector(".cur-img-num");
