@@ -6,28 +6,21 @@
 body {
   margin: 0 auto;
   max-width: 120rem;
+  min-width: 650px;
   overflow-x: hidden;
 }
 
 header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background-color: #007fad;
-  height: 3.4rem;
-  margin-bottom: 1.4rem;
+  height: 1.5rem;
 }
 
 .free-comett-logo {
-  height: 3.4rem;
+  height: 1.5rem;
   width: auto;
-  padding-left: 2.5%;
-}
-
-.free-reg-logo {
-  height: 3.4rem;
-  width: auto;
-  padding-right: 2.5%;
+  padding-left: 1%;
 }
 
 .nav-list {
@@ -44,13 +37,9 @@ a {
 }
 
 /* end of template */
-main {
-  padding: 0.6rem 0;
-}
-
 .nav-container {
   width: 100%;
-  padding: 0 3% 0 3%;
+  padding: 0 2% 0 2%;
   display: block;
   position: relative;
 }
@@ -60,10 +49,9 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 2.4rem;
-  font-size: 16px;
+  height: 2rem;
+  font-size: 1rem;
   position: relative;
-  margin-bottom: 0rem;
 }
 
 .page-tools {
@@ -71,8 +59,8 @@ main {
 }
 .page-tools .btn-left,
 .page-tools .btn-right {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 
 .canvas-container {
@@ -80,7 +68,7 @@ main {
   max-height: fit-content;
   display: grid;
   place-items: center;
-  padding: 0 3rem;
+  padding: 0;
   /* added */
 }
 .canvas-container canvas {
@@ -101,50 +89,58 @@ main {
   position: absolute;
   z-index: 2;
   cursor: pointer;
-  background-color: rgba(15, 15, 15, 0.6078431373);
+  background-color: rgba(0, 55, 75, 0.88);
+  top: 3rem;
   right: 0.7rem;
-  padding: 0.15rem 0;
-  border-radius: 2px;
+  padding: 0.25rem;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 .toolbox .setting-button {
   position: relative;
   z-index: 100;
   cursor: pointer;
-  opacity: 0.9;
+  opacity: 0.95;
 }
 .toolbox .icon-group {
   display: flex;
+  gap: 0.25rem;
 }
 .toolbox .icon {
-  height: 3rem;
-  width: 3rem;
+  height: 2.7rem;
+  width: 2.7rem;
   position: relative;
   z-index: 99;
   cursor: pointer;
   color: white;
-  display: block;
-  margin: 2px;
-  padding: 10px;
-  border-radius: 3px;
-  border: 1px solid white;
+  display: grid;
+  place-items: center;
+  font-size: 0.95rem;
+  margin: 0;
+  padding: 0.55rem;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  transition: background-color 0.15s ease, border-color 0.15s ease, opacity 0.15s ease;
 }
 .toolbox .icon.zoom-display {
-  width: 3.9rem;
+  width: 3.645rem;
   padding: 0;
-  margin: 2px auto;
+  margin: 0 auto;
   display: grid;
   place-items: center;
   border: none;
+  cursor: default;
 }
 .toolbox .icon.reset {
-  width: 3rem;
-  padding: 0;
-  margin: 2px auto;
-  display: grid;
-  place-items: center;
+  padding: 0.45rem 0;
+}
+.toolbox .icon:not(.zoom-display):hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.55);
 }
 .toolbox svg {
   cursor: pointer;
+  stroke-width: 1.7;
 }
 .toolbox .image-editor-toolbar {
   height: auto;
@@ -154,20 +150,22 @@ main {
   color: white;
   flex-direction: row;
   justify-content: space-around;
-  padding: 0.15rem 0;
+  padding-right: 0.25rem;
 }
 .toolbox .image-editor-toolbar .img-tools-sliders {
   display: grid;
-  padding: 0.15rem 0;
   width: auto;
   height: auto;
 }
 .toolbox .image-editor-toolbar .img-tools-sliders .slider-wrapper-style {
-  width: 70%;
-  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  grid-template-columns: 1fr 3fr;
   place-items: right;
-  gap: 0.5rem;
-  padding: 0.15rem 0;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+.toolbox .image-editor-toolbar .img-tools-sliders .slider-wrapper-style .slider-input {
+  accent-color: #007fad;
 }
 
 .is-visible {
@@ -178,6 +176,7 @@ main {
 }
 .is-visible.slider-wrapper-style {
   display: grid;
+  padding: 0.25rem 0 0 1rem;
 }
 
 .is-invisible {
